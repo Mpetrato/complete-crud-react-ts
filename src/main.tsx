@@ -1,17 +1,18 @@
-import { ThemeProvider } from '@mui/material'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
+
 import { App } from './App'
-import { LightTheme } from './shared/themes/Light'
+import { AppThemeProvider } from './shared/contexts/ThemeContext'
+import './index.css'
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <ThemeProvider theme={LightTheme}>
+  <AppThemeProvider>
     <BrowserRouter>
       <React.StrictMode>
         <App />
       </React.StrictMode>
     </BrowserRouter>
-  </ThemeProvider>
+  </AppThemeProvider>
 )
